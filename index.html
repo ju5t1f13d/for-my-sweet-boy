@@ -34,7 +34,7 @@ body {
 }
 
 .message {
-    color: white;
+    color: #fbfbfb;
     text-shadow: 
         -1.5px -1.5px 0 black,
          1.5px -1.5px 0 black,
@@ -49,16 +49,38 @@ body {
     width: 150px;
 }
 
+.opposite-corner-img {
+    position: absolute;
+    bottom: 200px;
+    right:70px;
+    width: 150px;
+}
+
 .heart {
     position: absolute;
     font-size: 50px;
     color: #c4a7e7;
-    animation: float 3s ease-in-out infinite;
+    animation: float 3s ease-in-out infinite, glows 2s infinite ease-in-out;
 }
 
 @keyframes float {
     50% {
         transform: translateY(-15px);
+    }
+}
+
+@keyframes glows {
+    0% {
+        text-shadow: 0 0 2px #c4a7e7;
+        opacity: 0.6;
+    }
+    50% {
+        text-shadow: 0 0 10px #c4a7e7;
+        opacity: 1;
+    }
+    100% {
+        text-shadow: 0 0 2px #c4a7e7;
+        opacity: 0.6;
     }
 }
 
@@ -68,10 +90,13 @@ body {
 <body>
 <div class="heart" style="top:10%; left: 10%;">♡</div>
 <div class="heart" style="top:20%; right: 15%;">♡</div>
-<div class="heart" style="top:15%; left: 20%;">♡</div>
+<div class="heart" style="top:20%; left: 15%;">♡</div>
 <div class="heart" style="top:10%; right: 10%;">♡</div>
+<div class="heart" style="top:15%; left: 3%;">♡</div>
+<div class="heart" style="top:15%; right: 3%;">♡</div>
 
 <img src="https://i.pinimg.com/736x/78/1a/75/781a75ee6224bdd4e00500152ad23507.jpg" class="corner-img">
+<img src="https://i.pinimg.com/736x/99/42/a9/9942a939ce0f6c24281aefaa9b581f26.jpg" class="opposite-corner-img">
 
 <div class="board">
     <div class="message">
